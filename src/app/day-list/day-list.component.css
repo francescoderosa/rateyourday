@@ -1,0 +1,2 @@
+#DaysContainer { display: flex; flex-direction: row; border:1px solid #ffccaa; padding: 20px}
+.DayBox { width: 200px; height: 200px; background-color: #aa00ff; color:#fff; margin-right: 20px;}

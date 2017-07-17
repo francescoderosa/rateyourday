@@ -1,16 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
+import { App } from './app.component';
+import { DayDetailComponent } from './day-detail/day-detail.component';
+import { DayListComponent } from './day-list/day-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [ App, DayDetailComponent, DayListComponent ],
+  imports: [ BrowserModule, FormsModule ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [App]
 })
 export class AppModule { }

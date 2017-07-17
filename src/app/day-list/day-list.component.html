@@ -1,0 +1,38 @@
+<div>
+  <div id="DaysContainer">
+
+    <div *ngFor="let pastDay of pastDays"  class="DayBox" (click)="onSelect(pastDay)">
+      {{pastDay.day}}
+      <hr/>
+      <!-- app-day-detail>Watch this day!</app-day-detail -->
+    </div>
+    <button (click)="onAdd()">Add</button>
+  </div>
+</div>
+
+<div *ngIf="selectedDay">
+    <hr/>
+    <h2>{{selectedDay.day}} details!</h2>
+    <div><label>id: </label>{{selectedDay.id}} - {{selectedDay.day}}</div>
+    <div>
+      <label>Comment: {{selectedDay.comment}}</label>
+      <input [(ngModel)]="selectedDay.comment" placeholder="comment your day..."/>
+      <br/>
+      <label>Value: {{selectedDay.value}}</label>
+      <input [(ngModel)]="selectedDay.value" placeholder="put your value..."/>
+    </div>
+</div>
+
+<div *ngIf="showAdd">
+    <hr/>
+    <h2>Insert new day details!</h2>
+    <div>
+      <form #newDayForm="ngForm" (ngSubmit)="onSubmit(newDayForm)">
+        <label>id: </label><input [(ngModel)]="id" name="id" placeholder="insert ID..."/>
+        <label>date: </label><input [(ngModel)]="day" name="day" placeholder="insert date..."/>
+        <label>value: </label><input [(ngModel)]="value" name="value" placeholder="put your value..."/>
+        <label>comment: </label><input [(ngModel)]="comment" name="comment" placeholder="comment your day..."/>
+        <button>Save</button>
+      </form>
+    </div>
+</div>
