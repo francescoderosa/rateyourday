@@ -4,6 +4,8 @@
     <div *ngFor="let pastDay of pastDays"  class="DayBox" (click)="onSelect(pastDay)">
       {{pastDay.day}}
       <hr/>
+      <h2>{{pastDay.value}}</h2>
+      {{pastDay.comment}}
       <!-- app-day-detail>Watch this day!</app-day-detail -->
     </div>
     <button (click)="onAdd()">Add</button>

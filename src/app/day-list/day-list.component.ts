@@ -17,9 +17,9 @@ export class DayListComponent implements OnInit {
 
   ngOnInit() {
     let pastDaysFromSouce:Day[]=[
-      {id:1, day:new Date(), value:9, comment:'I\'m a lucky man!'},
-      {id:2, day:new Date(), value:8, comment:'Oh, it\'s yesterday!!'},
-      {id:3, day:new Date(), value:10, comment:'It was Sunday...'}
+      {id:1, day:new Date().toLocaleDateString(), value:9, comment:'I\'m a lucky man!'},
+      {id:2, day:new Date().toLocaleDateString(), value:8, comment:'Oh, it\'s yesterday!!'},
+      {id:3, day:new Date().toLocaleDateString(), value:10, comment:'It was Sunday...'}
     ];
     this.pastDays = pastDaysFromSouce;
   }
